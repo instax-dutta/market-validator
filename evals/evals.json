@@ -1,0 +1,41 @@
+{
+  "skill_name": "market-validator",
+  "evals": [
+    {
+      "id": 1,
+      "name": "cold-email-personalization",
+      "prompt": "I'm thinking of building an AI tool that helps salespeople personalize cold emails at scale. The problem is everyone sends generic templates and reply rates are trash. Can you validate this idea? Target user: SMB salespeople at companies with 10-50 employees.",
+      "expected_output": "Validation report with real user quotes, complaint clusters, existing solutions, opportunity score, and a clear BUILD/PIVOT/SKIP recommendation",
+      "expectations": [
+        "The output includes an opportunity score (X/10)",
+        "The output includes real user quotes from at least 2 different platforms",
+        "The output identifies at least 3 complaint clusters",
+        "The output includes competitor analysis",
+        "The output ends with a clear BUILD/PIVOT/SKIP recommendation"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "broad-idea-narrowing",
+      "prompt": "I want to build an AI for developers. Is that a good idea?",
+      "expected_output": "The skill should push back on the broad idea and help narrow to a specific problem space, then validate that specific space",
+      "expectations": [
+        "The skill does not immediately validate 'AI for developers' as-is",
+        "The output narrows the problem space before doing research",
+        "The output includes real data from platform searches"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "low-signal-problem",
+      "prompt": "Should I build a smart toaster that sends you a notification when your bread is perfectly toasted? Target: tech enthusiasts who care about the perfect toast.",
+      "expected_output": "The skill should find very low signal and report honestly",
+      "expectations": [
+        "The research honestly reports finding minimal complaints",
+        "The score is low (1-3 range)",
+        "The recommendation is SKIP",
+        "The output does not fabricate or exaggerate findings"
+      ]
+    }
+  ]
+}
